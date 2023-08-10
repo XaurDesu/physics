@@ -240,12 +240,20 @@ When learning physics, remember:
 
 \chapter{Measurements.}
 
+
+
 \section{Uncertainty}
 
 There is always a level of uncertainty when measuring an object, given by the instrument of
 measurement we use, an atomic clock is not the same as your uncle's watch, and even though they both
 measure time, there's a certain level of uncertainty caused by the device, keep it in mind when doing experimental
-work.
+work. We can express this with the symbol ' $\pm$ '
+
+for example, if we had a milimeter of uncertainty on a measurement of 9,5 cm,
+we could indicate it as such:
+\begin{equation}
+    l = 9,5 \pm 0,1 cm
+\end{equation}
 
 \section{Scientific Notation}
 
@@ -271,29 +279,190 @@ $ time = 1,000,000s * 1,000s = 1000x10^6 s $
 
 $ 1 ft = 30,48 cm $
 
+Even though not specifically notified in the exercise, we must remember that:
+
+\begin{gather}
+    1m = 100cm    
+\end{gather}
+
 \section{Types of units}
 In the realm of physics, there is a bunch of ways to categorize units, be it by what do they 
 measure or how do they measure it
 
 \section{Scalar units}
 
+A scalar unit is defined as an unit with magnitude, but no direction. Such measurements
+aren't really concerned with being tied with a specific force acting over a particle. 
 
+Examples of such units include:
+\begin{itemize}
+    \item Natural numbers.
+    \item Constants.
+\end{itemize}
 
 \section{Vectors}
 
+A vector is a measurement with both a magnitude and a direction. that can exist on
+a specific set of dimensions. On this course, we won't be concerning ourselves with hyperplanes
+and might sparingly cover 3-dimensional planes, they would both be useful for you to learn eventually, so i encourage
+you to learn about them on your own accord, however. Our examples will be two-dimensional, for a simple, 
+introductory example, consider the following vector; $ \vec{A} = 
+\begin{pmatrix}
+    3 \\
+    2
+\end{pmatrix} $ :
 
-So, given an angle $ \varphi $, we can suppouse the measurements of a two-directional vector as:
-\begin{itemize}
-    \item  $ A_x $
-    
-    $ |\vec{A}| \cos \varphi $
-    \item $ A_y $
-    
-    $ |\vec{A}| \sin \varphi $
-\end{itemize}
+\begin{center}
+ \includegraphics*[scale=0.5]{vec_1.png}
 
-And given this, we can consider the vector '$\vec{A}$' as, $ \vec{A} = A_x i + A_y j $
+ \textit{Vector with x coordinates '3' and y coordinates '2'}
+\end{center}
 
+
+This is what we call a cartesian vector, for it's magnitudes are defined by the coordinates in a
+cartesian plane, however, we can turn it into a polar vector, measured by it's magnitude and 
+angle, through the following formulas:
+
+\begin{gather}
+    |\vec{A}| = \sqrt{A_x^2+A_y^2} \\
+    \tan \theta = \frac{A_y}{A_x}
+\end{gather}
+
+\paragraph{Exercise: Turning our example vector 'A' into a Polar vector.}
+\textit{Magnitude}
+\begin{gather}
+    |\vec{A}| = \sqrt{3^2+2^2}
+    |\vec{A}| = \sqrt{9+4} = \sqrt{12} = 2\sqrt{3} 
+\end{gather}
+\textit{Angle}
+\begin{gather}
+    \tan \theta = \frac{2}{3} \\
+    \theta = \tan^-1(\frac{2}{3}) \\
+    \theta = 33,69^o 
+\end{gather}
+
+\noindent Equally, we can turn a polar vector into a cartesian one. 
+
+So, given an angle $ \theta $ and a magnitude $ |\vec{A}| $, we can suppouse the measurements of a two-directional vector as:
+\begin{gather}
+    A_x  = |\vec{A}| \cos \theta \\
+    A_y = |\vec{A}| \sin \theta
+\end{gather}
+
+And given this, we can consider the vector '$\vec{A}$' as, $ \vec{A} = A_x i + A_y j $, where 'i' and
+'j', are what we're going to call a \textbf{unit vector}, a vector in a specific direction that has a value of 1.
+(this is considered an identity value for multiplication operations, and lets us do some vector sum 
+operations more intuitively)
+
+
+\paragraph{Exercise: Turning our example vector 'A' back into a cartesian vector.}
+\begin{gather}
+    A_x  = |2\sqrt{3}| \cos 33,69^o = 2,88 \approxeq 3 \\
+    A_y = |2\sqrt{3}| \sin 33,69^o = 1,92  \approxeq 2
+\end{gather}
+
+As it might be evident, the conversion isn't exact, this happens because of the 
+angle not being an exact conversion, this will happen when you disregard part of a value
+for whatever reason. The more exact of a measurement you keep, the less uncertainty you will
+end up with.
+
+\subsection{Vector sum}
+
+
+We can take any $ \vec{a} $ and $ \vec{b} $ vectors on the same space and add them to each other
+in the form:
+
+\begin{equation}
+    \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        a_3 \\
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        b_1 \\
+        b_2 \\
+        b_3 \\
+    \end{bmatrix}
+    = 
+    \begin{pmatrix}
+        a_1 + b_1\\
+        a_2 + b_2\\
+        a_3 + b_3\\
+    \end{pmatrix}
+\end{equation}
+
+Such form remains in the case we can do subtraction, which is expressed on the equation:
+
+\begin{equation}
+    \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        a_3 \\
+    \end{bmatrix}
+    -
+    \begin{bmatrix}
+        b_1 \\
+        b_2 \\
+        b_3 \\
+    \end{bmatrix}
+    = 
+    \begin{pmatrix}
+        a_1 - b_1\\
+        a_2 - b_2\\
+        a_3 - b_3\\
+    \end{pmatrix}
+\end{equation}
+
+This kind of operations have certain properties, shown as:
+\begin{gather}
+    (\alpha + \beta)\vec[v] = \alpha\vec{v} + \beta\vec{v} \\
+    \vec{v} * 1 = \vec{v} \\
+    \vec{v} * \vec{0} = \vec{0} \\
+    \beta \vec{v} = 
+    \begin{pmatrix}
+        \beta a_1\\
+        \beta a_2\\
+        \beta a_3\\
+    \end{pmatrix}
+\end{gather}
+
+Two vectors $ \vec{a} $ and $ \vec{b} $ are equal if and only if:
+\begin{equation}
+    \begin{cases}
+        \vec{a} \exists \mathbb{R}^3 \\
+        \vec{b} \exists \mathbb{R}^3
+    \end{cases}
+    \implies
+    \begin{pmatrix}
+        a_1 = b_1\\
+        a_2 = b_2\\
+        a_3 = b_3\\
+    \end{pmatrix}
+    \text{
+        \textit{note: this can be generalized to 'n' dimensions larger than 0}}
+\end{equation}
+
+in either case,  $ \vec{0} $ is the identity of the operation, therefore:
+\begin{equation}
+    \vec{a} + \vec{0} = \vec{a}
+\end{equation}
+
+
+\subsection{Scalar product}
+We can multiply vectors between each other with the following formula:
+
+$$ |\vec{A}| \centerdot |\vec{B}| = |\vec{A}||\vec{B}|\cos \theta $$
+
+We can also write it as such for cartesian vectors:
+$$ A_x B_x + A_y B_y + A_z B_z $$
+
+This is a commutative operation, that won't be affected by neither A nor B's 
+
+
+\subsection{Solved Exercises}
+\subsubsection{Vector Sum}
+\paragraph{An espeologist explores a cave and follows a }
 
 %----------------------------------------------------------------------------
 %	More sections?
