@@ -298,6 +298,7 @@ Examples of such units include:
 \begin{itemize}
     \item Natural numbers.
     \item Constants.
+    \item Acceleration
 \end{itemize}
 
 \section{Vectors}
@@ -520,14 +521,104 @@ Such movement can be defined as:
     \Delta x = x_2 - x_1   
 \end{equation}
 
-velocity on this kind of movement can be calculated as:
+medium velocity on this kind of movement can be calculated as:
 
 \begin{equation}
     v_{med} = \frac{\Delta x}{\Delta y} = \frac{x_2 - x_1}{t_2 - t_1}
 \end{equation}
 
 Keep in mind, we can define negative velocity in such systems to move in a
-negative direction (i.e moving from B=7 to A=3, for example.)
+negative direction (i.e moving from B=7 to A=3, for example.) and besides that
+\textbf{This is not the same as speed, because speed is concerned with how fast the object moves
+while this is concerned with how fast the object arrives somewhere, and that's not the same.}
+
+\section{instantaneous speed and velocity}
+
+It should now be evident that we can assume a straight line that can be interpreted as the velocity of an
+object, as we could see in this two-dimensional graph.
+
+\begin{center}
+    \includegraphics[scale = 0.6]{pendant.png}    
+\end{center}
+
+We define the instantaneous velocity of an object as a derivative of the form:
+\begin{equation}
+    v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt}   
+\end{equation}
+
+The simplest formula for such a calculation is, however:
+
+\begin{equation}
+    x = x_0 + vt
+\end{equation}
+
+
+\section{Acceleration}
+
+Of course, not all objects will move at a constant pace, most times there will be a 
+change in speed happening at some moment in their movement. This is a scalar 
+variable that can be used to calculate the overall distance when taking into account
+such changes on movement. We can calculate the acceleration of an object as follows:
+
+\begin{equation}
+    a = \frac{\Delta v}{\Delta t}
+\end{equation}
+
+we can integrate distance as a function of acceleration as it follows, as well:
+
+\begin{equation}
+    \int_{t}^{0} v \,dt = \int_{x}^{x_0} \,dx \\ \text{\textit{ Note: we can integrate the result of this equation to prove correctness.}}
+\end{equation}
+
+Through a mathematical proof that 
+
+\subsection{Constant Acceleration}
+
+An object can be said to have constant acceleration when acceleration is not a variable, but a 
+constant. When working on such a system we can affirm velocity as:
+
+\begin{equation}
+    at = v - v_0
+\end{equation}
+
+and we can indicate distance as:
+
+\begin{equation}
+    x = x_0 + v_0 t + \frac{1}{2} at^2
+\end{equation}
+
+From these two we can gather the following formulas:
+
+\begin{itemize}
+    \item $v = v_0 + at$
+    \item $t = \frac{v-v_0}{a}$
+    \item $ v^2 = v^2_0 + 2a(x-x_0) \text{\textit{If we don't know time}} $
+    \item $ x - x_0 = (\frac{v+v_0}{2})t \text{\textit{If we don't know acceleration}} $
+\end{itemize}
+
+\section{Exercises}
+\subsection*{One-dimensional movement}
+
+
+\subsection{Acceleration}
+\paragraph{what's the maximum possible height of a marker being thrown at a
+velocity of $ 0,5 \frac{m}{s}$ ?}
+
+We know that:
+\begin{itemize}
+    \item gravity (acceleration): $ -9,8 \frac{m}{s^2} $
+    \item initial position: 0
+    \item initial velocity = $ 0,5 \frac{m}{s} $
+\end{itemize}
+
+\begin{gather}
+    v^2 = v^2_0 + 2a(x-x_0) \\
+    0 = v_0^2 - 2g(y-0) \\
+    v_0^2 = 2gy \\
+    y = \frac{v_0^2}{2g} \\ 
+    y = - \frac{0,5\frac{m}{s}^2}{2(9,8\frac{m}{s^2})}
+\end{gather}
+
 
 \chapterimage{Heading4.jpg}
 \chapter{Useful Information}
@@ -545,7 +636,14 @@ negative direction (i.e moving from B=7 to A=3, for example.)
 
 \end{itemize}
 
-
+\section{Definitions}
+\begin{itemize}
+    \item Delta: 
+    
+    noted as $ \Delta $, it indicates change in a variable, taking $ x $ as the variable
+    that changes, $ x_0 $ as it initial state and $ x_f $ as the final one, we can indicate how much it
+    changes as follows: $$ \Delta x = x_f - x_0 $$
+\end{itemize}
 %----------------------------------------------------------------------------------------
 %	References
 %----------------------------------------------------------------------------------------
