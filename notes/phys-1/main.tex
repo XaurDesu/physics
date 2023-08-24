@@ -631,6 +631,30 @@ how we already expected vectors to work.
 
 \subsection{Projectile movement.}
 
+We can assume, on this version of a two-dimensional movement, that:
+
+\begin{gather}
+    x = x_0 + v_0 \cos \theta t \\
+    v_x = v_0 \cos \theta_0 = v_0 x \\
+    y = y_0 + v_0 \sin \theta_0 t - \frac{1}{2} gt^2 \\
+    v_y = v_0 \sin \theta - gt \\
+    v_y^2 = v_0^2 \sin^2 \theta_0 - 2g (y - y_0)
+\end{gather}
+
+We can also assume an 'R' distance that will be the maximum possible distance in the x axis
+with 'y' as 0. We can get it as:
+
+\begin{gather}
+    v_0 \sin \theta_0 = gt \\
+    t = \frac{v_0 \sin \theta_0}{g} \\
+    R = 0 + v_0 \cos \theta_0 \centerdot \frac{2 v_0 \sin \theta_0}{g} \\
+    R = \frac{v_0^2 \sin(2 \theta_0)}{g}
+\end{gather}
+
+This is the maximum possible distance that you can get for a displacement given 
+certain parameters to be replaced in such a formula. Keep in mind that when $\theta$ is 45 degrees, the
+value of 'R' is at its peak for that specific configuration, so given a question regarding angles, the closest to
+45 it is, the furthest it will make it.
 
 \section{Exercises}
 \subsection*{One-dimensional movement}
