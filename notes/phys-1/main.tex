@@ -654,7 +654,37 @@ with 'y' as 0. We can get it as:
 This is the maximum possible distance that you can get for a displacement given 
 certain parameters to be replaced in such a formula. Keep in mind that when $\theta$ is 45 degrees, the
 value of 'R' is at its peak for that specific configuration, so given a question regarding angles, the closest to
-45 it is, the furthest it will make it.
+45 it is, the furthest it will make it. A few other useful formulas are:
+
+\begin{gather}
+    x = x_0 + v_0t \\
+    y = h + v_0 \sin \theta_0 t - \frac{1}{2} gt^2 \\
+    t = \sqrt{\frac{2h}{g}} \\
+    x = v_0 \sqrt{\frac{2h}{g}}
+\end{gather}
+
+When working on an elevated end point, we can imagine that, given a distance 'D' and an elevated endpont 'H':
+
+\begin{gather}
+    x = x_0 + v_0 \cos \theta_0 t \\
+    y = y_0 +v_0 \sin \theta_0 t - \frac{1}{2} gt^2 \\
+    v_y^2 + v^2 \sin^2 \theta_0 -2g(y - y_0) \\
+    D = v_0 \cos \theta_0 t \\ 
+    t = \frac{D}{V_0 \cos \theta_0} \\
+    H = \frac{v_0 \sin \theta_0 D}{v_0 \cos \theta_0} - \frac{1}{2} g (\frac{D^2}{v_0^2 \cos^2 \theta_0}) \\
+    H = D \tan \theta_0 - \frac{1}{2} g \frac{D^2}{v_0^2 \cos^2 \theta_0} \\
+    V_0^2 = \frac{gD^2}{2 \cos^2 \theta_0 (D \tan \theta_0 - H)}
+\end{gather}
+
+\paragraph*{What's the secret on getting these problems right?}
+
+Writing all of the possible equations and looking at:
+
+\begin{itemize}
+    \item What do i have?
+    \item What do we need?
+    \item How can i rewrite the equations that i have in order to get what i need?
+\end{itemize}
 
 \section{Exercises}
 \subsection*{One-dimensional movement}
