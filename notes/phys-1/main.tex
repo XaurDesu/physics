@@ -775,6 +775,10 @@ opposed in direction. This can be expressed as:
 
 \section{Free-body diagrams}
 
+A free body diagram is a representation of a system and the forces acting over it.
+
+
+
 \section{Examples}
 \subsection{Forces}
 
@@ -797,6 +801,7 @@ We know:
 \begin{itemize}
     \item $ V_f = 3x10^6 \frac{m}{s} $
 \end{itemize}
+
 \textit{Acceleration}
 
 \begin{gather}
@@ -804,6 +809,33 @@ We know:
     \vec{V}_f^2 = \vec{v}_0^2 + 2a(x-x_0) \\
     a = \frac{\vec{V}_f^2}{2d}\\
     a = \frac{3x10^6 \frac{m}{s}}{2 x 1,8x10^{-2}m} = 2,5x10^{14} \frac{m}{s^2}
+\end{gather}
+
+\paragraph{A 2.00 kg object is subject to three forces that give it a total
+acceleration of $\vec{a} = -(8,00 \frac{m}{s^2})i + (6,00 \frac{m}{s^2})j$; given that two of the three forces are
+$ (30,00N)i + (16,00N)j $ and $-(12,00N)i + (8,00N)j$, What is the third force?}
+
+\textit{solution}
+
+We know that:
+\begin{gather}
+    \sum F_x = ma_x\\
+    \sum F_y = ma_y
+\end{gather}
+
+and therefore:
+\begin{gather}
+    \sum{F_x} = (2,00 kg)*(-8,00 \frac{m}{s^2}) = -16N \\
+    \sum{F_y} = (2,00 kg)*(6,00 \frac{m}{s^2}) = 12N \\
+    F_{x1} + F_{x2} + F_{x3} = -16N\\
+    F_{y1} + F_{y2} + F_{y3} = 12N\\
+    <replace>\\
+    30,0N - 12,00N + F_{x3} = -16N\\
+    16,00N + 8,00N + F_{y3} = 12N\\
+    F_{x3} = -16N + 12,00N - 30N\\
+    F_{y3} = 12N - 8,00N - 16,00N\\
+    F_{x3} = -34N\\
+    F_{y3} = -12N
 \end{gather}
 
 \chapterimage{Heading4.jpg}
